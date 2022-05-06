@@ -7,37 +7,40 @@ import me.dpohvar.powernbt.utils.query.NBTQuery;
 
 public class ActionMove extends Action {
 
-    private final Caller caller;
-    private final Argument arg1;
-    private final Argument arg2;
+	private final Caller caller;
+	private final Argument arg1;
+	private final Argument arg2;
 
-    public ActionMove(Caller caller, String o1, String q1, String o2, String q2) {
-        this.caller = caller;
-        this.arg1 = new Argument(caller, o1, q1);
-        this.arg2 = new Argument(caller, o2, q2);
-    }
+	public ActionMove(Caller caller, String o1, String q1, String o2, String q2) {
+		this.caller = caller;
+		this.arg1 = new Argument(caller, o1, q1);
+		this.arg2 = new Argument(caller, o2, q2);
+	}
 
-    @Override
-    public void execute() throws Exception {
-        if (arg1.needPrepare()) {
-            arg1.prepare(this, null, null);
-            return;
-        }
-        NBTContainer container = arg1.getContainer();
-        NBTQuery query = arg1.getQuery();
-        if (arg2.needPrepare()) {
-            arg2.prepare(this, container, query);
-            return;
-        }
-        Object base = arg2.getContainer().getCustomTag(arg2.getQuery());
-        if (base == null) throw new RuntimeException(PowerNBT.plugin.translate("error_null"));
+	@Override
+	public void execute() throws Exception {
+		if (arg1.needPrepare()) {
+			arg1.prepare(this, null, null);
+			return;
+		}
+		NBTContainer container = arg1.getContainer();
+		NBTQuery query = arg1.getQuery();
+		if (arg2.needPrepare()) {
+			arg2.prepare(this, container, query);
+			return;
+		}
+		Object base = arg2.getContainer().getCustomTag(arg2.getQuery());
+		if (base == null) {
+			throw new RuntimeException(PowerNBT.plugin.translate("error_null"));
+		}
 
-        try{
-            container.setCustomTag(query, base);
-            arg2.getContainer().removeTag(arg2.getQuery());
-            caller.sendValue(PowerNBT.plugin.translate("success_move"), base, false, false);
-        } catch (Exception e) {
-            throw new RuntimeException(PowerNBT.plugin.translate("fail_move", query.toString()),e);
-        }
-    }
+		try {
+			container.setCustomTag(query, base);
+			arg2.getContainer().removeTag(arg2.getQuery());
+			caller.sendValue(PowerNBT.plugin.translate("success_move"), base, false, false);
+		} catch (Exception e) {
+			throw new RuntimeException(PowerNBT.plugin.translate("fail_move", query.toString()), e);
+		}
+	}
+
 }

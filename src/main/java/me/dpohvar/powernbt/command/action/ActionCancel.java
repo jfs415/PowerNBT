@@ -6,15 +6,16 @@ import static me.dpohvar.powernbt.PowerNBT.plugin;
 
 public class ActionCancel extends Action {
 
-    private final Caller caller;
+	private final Caller caller;
 
-    public ActionCancel(Caller caller) {
-        this.caller = caller;
-    }
+	public ActionCancel(Caller caller) {
+		this.caller = caller;
+	}
 
-    @Override
-    public void execute() {
-        caller.hold(null,null);
-        caller.send(plugin.translate("selection_cancel"));
-    }
+	@Override
+	public void execute() {
+		caller.hold(null, null);
+		caller.send(plugin.translate("selection_cancel"));
+	}
+
 }

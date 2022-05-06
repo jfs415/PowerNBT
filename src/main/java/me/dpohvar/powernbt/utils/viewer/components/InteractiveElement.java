@@ -8,18 +8,27 @@ import net.md_5.bungee.api.chat.TextComponent;
 
 public class InteractiveElement implements Element {
 
-    private final TextComponent component;
+	private final TextComponent component;
 
-    public InteractiveElement(ChatColor color, String buttonText, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion){
-        component = new TextComponent(buttonText);
-        if (color != null) component.setColor(color);
-        if (clickEvent != null) component.setClickEvent(clickEvent);
-        if (hoverEvent != null) component.setHoverEvent(hoverEvent);
-        if (insertion != null) component.setInsertion(insertion);
-    }
+	public InteractiveElement(ChatColor color, String buttonText, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion) {
+		component = new TextComponent(buttonText);
+		if (color != null) {
+			component.setColor(color);
+		}
+		if (clickEvent != null) {
+			component.setClickEvent(clickEvent);
+		}
+		if (hoverEvent != null) {
+			component.setHoverEvent(hoverEvent);
+		}
+		if (insertion != null) {
+			component.setInsertion(insertion);
+		}
+	}
 
-    @Override
-    public BaseComponent getComponent() {
-        return component;
-    }
+	@Override
+	public BaseComponent getComponent() {
+		return component;
+	}
+
 }

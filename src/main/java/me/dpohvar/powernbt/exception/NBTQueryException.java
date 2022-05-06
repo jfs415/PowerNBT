@@ -8,19 +8,20 @@ package me.dpohvar.powernbt.exception;
  */
 public class NBTQueryException extends Exception {
 
-    public NBTQueryException(){
-        super();
-    }
+	public NBTQueryException() {
+		super();
+	}
 
-    public NBTQueryException(String message){
-        super(message);
-    }
+	public NBTQueryException(String message) {
+		super(message);
+	}
 
-    public NBTQueryException(Throwable cause){
-        super(cause);
-    }
+	public NBTQueryException(Throwable cause) {
+		super(cause);
+	}
 
-    public NBTQueryException(String message,Throwable cause){
-        super(message,cause);
-    }
+	public NBTQueryException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
 }
