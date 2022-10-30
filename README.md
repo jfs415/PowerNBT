@@ -1,3 +1,5 @@
+PowerNBT is based on flinbein's original resource, which was abandoned after release 1.1.4.1 for Minecraft 1.18 (2022-02-26). Credit for the idea belongs to him. This fork is based on JFS415's reformatting.
+
 PowerNBT
 ========
 
