@@ -2,7 +2,13 @@ package me.dpohvar.powernbt.api;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.AbstractSet;
+import java.util.AbstractCollection;
 
 /**
  * Represent net.minecraft.server.NBTTagCompound.<br>
