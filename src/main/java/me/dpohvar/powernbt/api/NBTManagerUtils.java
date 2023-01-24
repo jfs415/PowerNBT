@@ -1,6 +1,6 @@
 package me.dpohvar.powernbt.api;
 
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;

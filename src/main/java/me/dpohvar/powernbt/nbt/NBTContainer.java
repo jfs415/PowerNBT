@@ -8,8 +8,8 @@ import me.dpohvar.powernbt.utils.PowerJSONParser;
 import me.dpohvar.powernbt.utils.StringParser;
 import me.dpohvar.powernbt.utils.query.NBTQuery;
 
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;

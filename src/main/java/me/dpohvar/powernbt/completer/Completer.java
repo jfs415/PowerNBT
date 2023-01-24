@@ -3,7 +3,7 @@ package me.dpohvar.powernbt.completer;
 import me.dpohvar.powernbt.utils.Caller;
 import me.dpohvar.powernbt.utils.StringParser;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;

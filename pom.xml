@@ -13,9 +13,9 @@
 
         <java-version>17</java-version>
 
-        <api-version>1.17</api-version>
-        <bukkit-version>1.15.2-R0.1-SNAPSHOT</bukkit-version>
-        <spigot-version>1.17.1-R0.1-SNAPSHOT</spigot-version>
+        <api-version>1.19</api-version>
+        <bukkit-version>1.19.3-R0.1-SNAPSHOT</bukkit-version>
+        <spigot-version>1.19.3-R0.1-SNAPSHOT</spigot-version>
         <groovy-version>3.0.9</groovy-version>
         <plugin-version>DEV-SNAPSHOT</plugin-version>
 
@@ -89,6 +89,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.7.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
