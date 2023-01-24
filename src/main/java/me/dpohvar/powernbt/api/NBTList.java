@@ -1,6 +1,14 @@
 package me.dpohvar.powernbt.api;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
+import java.util.Iterator;
 
 /**
  * Represent net.minecraft.server.NBTTagList.<br>
