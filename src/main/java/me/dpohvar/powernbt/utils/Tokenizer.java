@@ -1,6 +1,11 @@
 package me.dpohvar.powernbt.utils;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.HashMap;
+import java.util.Collection;
+import java.util.TreeMap;
+import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Tokenizer {
 
