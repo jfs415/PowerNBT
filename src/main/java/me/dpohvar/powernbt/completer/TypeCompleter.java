@@ -8,7 +8,12 @@ import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Queue;
+import java.util.LinkedList;
 import java.util.logging.Level;
 
 public class TypeCompleter {

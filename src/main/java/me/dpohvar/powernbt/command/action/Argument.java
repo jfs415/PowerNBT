@@ -5,7 +5,18 @@ import me.dpohvar.powernbt.api.NBTCompound;
 import me.dpohvar.powernbt.api.NBTList;
 import me.dpohvar.powernbt.api.NBTManagerUtils;
 import me.dpohvar.powernbt.completer.TypeCompleter;
-import me.dpohvar.powernbt.nbt.*;
+import me.dpohvar.powernbt.nbt.NBTContainer;
+import me.dpohvar.powernbt.nbt.NBTContainerValue;
+import me.dpohvar.powernbt.nbt.NBTContainerItem;
+import me.dpohvar.powernbt.nbt.NBTContainerComplex;
+import me.dpohvar.powernbt.nbt.NBTContainerEntity;
+import me.dpohvar.powernbt.nbt.NBTContainerChunk;
+import me.dpohvar.powernbt.nbt.NBTContainerVariable;
+import me.dpohvar.powernbt.nbt.NBTContainerBlock;
+import me.dpohvar.powernbt.nbt.NBTContainerFileGZipCustom;
+import me.dpohvar.powernbt.nbt.NBTContainerFile;
+import me.dpohvar.powernbt.nbt.NBTContainerFileGZip;
+import me.dpohvar.powernbt.nbt.NBTType;
 import me.dpohvar.powernbt.utils.Caller;
 import me.dpohvar.powernbt.utils.NBTParser;
 import me.dpohvar.powernbt.utils.PowerJSONParser;
@@ -27,7 +38,11 @@ import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+import java.util.List;
+import java.util.HashSet;
 
 import static me.dpohvar.powernbt.PowerNBT.plugin;
 
