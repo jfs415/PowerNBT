@@ -6,7 +6,12 @@ import me.dpohvar.powernbt.utils.StringParser;
 
 import org.bukkit.ChatColor;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Objects;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Arrays;
 
 public record KeySelector(String key) implements QSelector {
 
