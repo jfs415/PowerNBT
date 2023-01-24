@@ -14,7 +14,11 @@ import net.md_5.bungee.api.chat.hover.content.Text;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 public class FooterElement implements Element {
