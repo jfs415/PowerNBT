@@ -5,9 +5,11 @@ import me.dpohvar.powernbt.command.CommandNBT;
 import me.dpohvar.powernbt.completer.CompleterNBT;
 import me.dpohvar.powernbt.completer.TypeCompleter;
 import me.dpohvar.powernbt.listener.SelectListener;
-import me.dpohvar.powernbt.utils.*;
-import me.dpohvar.powernbt.utils.viewer.InteractiveViewer;
-import me.dpohvar.powernbt.utils.viewer.ViewerStyle;
+import me.dpohvar.powernbt.utils.Caller;
+import me.dpohvar.powernbt.utils.Translator;
+import me.dpohvar.powernbt.utils.Tokenizer;
+import me.dpohvar.powernbt.utils.ReflectionUtils;
+import me.dpohvar.powernbt.utils.NBTStaticViewer;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
