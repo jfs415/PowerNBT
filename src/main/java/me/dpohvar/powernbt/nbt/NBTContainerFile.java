@@ -4,7 +4,11 @@ import me.dpohvar.powernbt.api.NBTManager;
 import me.dpohvar.powernbt.utils.PowerJSONParser;
 import me.dpohvar.powernbt.utils.StringParser;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
