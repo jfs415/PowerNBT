@@ -12,23 +12,22 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import static me.dpohvar.powernbt.PowerNBT.plugin;
-import static org.bukkit.ChatColor.*;
 
 public enum NBTType {
 
-	END((byte) 0, "end", "\u24DE", WHITE, () -> null), // ⓞ
-	BYTE((byte) 1, "byte", "\u24B7", RED, () -> (byte) 0), // Ⓑ
-	SHORT((byte) 2, "short", "\u24C8", YELLOW, () -> (short) 0), // Ⓢ
-	INT((byte) 3, "int", "\u24BE", BLUE, () -> (int) 0), // Ⓘ
-	LONG((byte) 4, "long", "\u24C1", AQUA, () -> (long) 0), // Ⓛ
-	FLOAT((byte) 5, "float", "\u24BB", DARK_PURPLE, () -> (float) 0), // Ⓕ
-	DOUBLE((byte) 6, "double", "\u24B9", LIGHT_PURPLE, () -> (double) 0), // Ⓓ
-	BYTEARRAY((byte) 7, "byte[]", ChatColor.BOLD + "\u24D1", DARK_RED, () -> new byte[0]), // ⓑ
-	STRING((byte) 8, "string", "\u24C9", GREEN, () -> ""), // Ⓣ
-	LIST((byte) 9, "list", "\u24B6", DARK_GRAY, NBTList::new), // Ⓐ
-	COMPOUND((byte) 10, "compound", "\u24C2", GRAY, NBTCompound::new), // Ⓜ
-	INTARRAY((byte) 11, "int[]", ChatColor.BOLD + "\u24D8", DARK_BLUE, () -> new int[0]), // ⓘ
-	LONGARRAY((byte) 12, "long[]", ChatColor.BOLD + "\u24C1", DARK_AQUA, () -> new long[0]), // Ⓛ
+	END((byte) 0, "end", "\u24DE", ChatColor.WHITE, () -> null), // ⓞ
+	BYTE((byte) 1, "byte", "\u24B7", ChatColor.RED, () -> (byte) 0), // Ⓑ
+	SHORT((byte) 2, "short", "\u24C8", ChatColor.YELLOW, () -> (short) 0), // Ⓢ
+	INT((byte) 3, "int", "\u24BE", ChatColor.BLUE, () -> (int) 0), // Ⓘ
+	LONG((byte) 4, "long", "\u24C1", ChatColor.AQUA, () -> (long) 0), // Ⓛ
+	FLOAT((byte) 5, "float", "\u24BB", ChatColor.DARK_PURPLE, () -> (float) 0), // Ⓕ
+	DOUBLE((byte) 6, "double", "\u24B9", ChatColor.LIGHT_PURPLE, () -> (double) 0), // Ⓓ
+	BYTEARRAY((byte) 7, "byte[]", ChatColor.BOLD + "\u24D1", ChatColor.DARK_RED, () -> new byte[0]), // ⓑ
+	STRING((byte) 8, "string", "\u24C9", ChatColor.GREEN, () -> ""), // Ⓣ
+	LIST((byte) 9, "list", "\u24B6", ChatColor.DARK_GRAY, NBTList::new), // Ⓐ
+	COMPOUND((byte) 10, "compound", "\u24C2", ChatColor.GRAY, NBTCompound::new), // Ⓜ
+	INTARRAY((byte) 11, "int[]", ChatColor.BOLD + "\u24D8", ChatColor.DARK_BLUE, () -> new int[0]), // ⓘ
+	LONGARRAY((byte) 12, "long[]", ChatColor.BOLD + "\u24C1", ChatColor.DARK_AQUA, () -> new long[0]), // Ⓛ
 	;
 
 	private static final NBTManager nbt = NBTManager.getInstance();
@@ -77,48 +76,48 @@ public enum NBTType {
 
 	public static ChatColor getTypeColorByValue(Object value) {
 		if (value == null) {
-			return WHITE;
+			return ChatColor.WHITE;
 		}
 		if (value instanceof Boolean) {
-			return GOLD;
+			return ChatColor.GOLD;
 		}
 		if (value instanceof Byte) {
-			return RED;
+			return ChatColor.RED;
 		}
 		if (value instanceof Short) {
-			return YELLOW;
+			return ChatColor.YELLOW;
 		}
 		if (value instanceof Integer) {
-			return BLUE;
+			return ChatColor.BLUE;
 		}
 		if (value instanceof Long) {
-			return AQUA;
+			return ChatColor.AQUA;
 		}
 		if (value instanceof Float) {
-			return DARK_PURPLE;
+			return ChatColor.DARK_PURPLE;
 		}
 		if (value instanceof Double) {
-			return LIGHT_PURPLE;
+			return ChatColor.LIGHT_PURPLE;
 		}
 		if (value instanceof byte[]) {
-			return DARK_RED;
+			return ChatColor.DARK_RED;
 		}
 		if (value instanceof int[]) {
-			return DARK_BLUE;
+			return ChatColor.DARK_BLUE;
 		}
 		if (value instanceof long[]) {
-			return DARK_AQUA;
+			return ChatColor.DARK_AQUA;
 		}
 		if (value instanceof String) {
-			return GREEN;
+			return ChatColor.GREEN;
 		}
 		if (value instanceof Map) {
-			return GRAY;
+			return ChatColor.GRAY;
 		}
 		if (NBTManagerUtils.convertToObjectArrayOrNull(value) != null) {
-			return DARK_GRAY;
+			return ChatColor.DARK_GRAY;
 		}
-		return MAGIC;
+		return ChatColor.MAGIC;
 	}
 
 	public static String getIconByValue(Object value) {
