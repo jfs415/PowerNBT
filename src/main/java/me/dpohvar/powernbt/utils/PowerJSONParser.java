@@ -3,7 +3,18 @@ package me.dpohvar.powernbt.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.*;
+import java.io.Writer;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.OutputStreamWriter;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
