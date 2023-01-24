@@ -4,7 +4,7 @@ import me.dpohvar.powernbt.exception.ParseException;
 
 import org.bukkit.ChatColor;
 
-import static me.dpohvar.powernbt.utils.StringParser.Mode.*;
+import me.dpohvar.powernbt.utils.StringParser;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,7 +39,7 @@ public class StringParser {
 			switch (mode) {
 				case CHAR -> {
 					switch (c) {
-						case '\\' -> mode = ESCAPE;
+						case '\\' -> mode = StringParser.Mode.ESCAPE;
 						case '&' -> buffer.append(ChatColor.COLOR_CHAR);
 						case '\"' -> throw new ParseException(input, row, col, "unescaped '\"'");
 						default -> buffer.append(c);
@@ -66,21 +66,21 @@ public class StringParser {
 						case '&' -> buffer.append('&');
 						case '_' -> buffer.append(' ');
 						case 'u' -> {
-							mode = UNICODE;
+							mode = StringParser.Mode.UNICODE;
 							continue parse;
 						}
 						case ' ', '\t' -> {
-							mode = SPACE;
+							mode = StringParser.Mode.SPACE;
 							continue parse;
 						}
 						case '\r', '\n' -> {
 							buffer.append(c);
-							mode = SPACE;
+							mode = StringParser.Mode.SPACE;
 							continue parse;
 						}
 						default -> throw new ParseException(input, row, col, "can't escape symbol " + c);
 					}
-					mode = CHAR;
+					mode = StringParser.Mode.CHAR;
 				}
 				case UNICODE -> {
 					switch (c) {
@@ -90,7 +90,7 @@ public class StringParser {
 								char character = (char) Integer.parseInt(unicode.toString(), 16);
 								buffer.append(character);
 								unicode = new StringBuilder();
-								mode = CHAR;
+								mode = StringParser.Mode.CHAR;
 							}
 						}
 						default -> {
@@ -103,18 +103,18 @@ public class StringParser {
 						case '\t', '\r', ' ' -> {
 						}
 						case '\n' -> buffer.append(c);
-						case '\\' -> mode = ESCAPE;
+						case '\\' -> mode = StringParser.Mode.ESCAPE;
 						case '\"' -> throw new ParseException(input, row, col, "unescaped '\"'");
 						default -> {
 							buffer.append(c);
-							mode = CHAR;
+							mode = StringParser.Mode.CHAR;
 						}
 					}
 				}
 				default -> throw new ParseException(input, row, col, "unknown");
 			}
 		}
-		if (mode == CHAR) {
+		if (mode == StringParser.Mode.CHAR) {
 			return buffer.toString();
 		} else {
 			throw new ParseException(input, row, col, "unexpected end of string");
