@@ -17,7 +17,7 @@
         <bukkit-version>1.19.3-R0.1-SNAPSHOT</bukkit-version>
         <spigot-version>1.19.3-R0.1-SNAPSHOT</spigot-version>
         <groovy-version>3.0.9</groovy-version>
-        <plugin-version>DEV-SNAPSHOT</plugin-version>
+        <plugin-version>1.2.0-SNAPSHOT</plugin-version>
 
         <github.global.server>github</github.global.server>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
