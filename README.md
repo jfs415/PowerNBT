@@ -1,7 +1,6 @@
 PowerNBT is based on [flinbein's original resource](https://github.com/flinbein/PowerNBT), which was abandoned after release 1.1.4.1 for Minecraft 1.18 (2022-02-26). Credit for the idea belongs to him. This fork is based on [JFS415's extensive code reformat](https://github.com/jfs415/PowerNBT).
 
-PowerNBT
-========
+## PowerNBT
 
 Command-based in-game NBT editor for Bukkit
 
@@ -26,12 +25,10 @@ mvn -Dplugin-version=LOCALDEV-SNAPSHOT package
 * supports variables
 * JSON editor for NBT strings
 
-**Permissions**
+## Permissions
 * powernbt.use
 
-***********************************************
-
-## Commands ##
+## Commands
 
 Use nbt command:  
 `/powernbt ...`  
@@ -45,8 +42,7 @@ Use nbt command in silent mode:
 
 `(command) (required param) (optional param)`
 
-### Browse tags ###
-
+### Browse tags
 
 You can browse nbt tree structure using this command:  
 `/nbt (object) (query) (view-mode)`
@@ -65,7 +61,7 @@ Examples:
 
 **view-mode (optional)** - View mode of tag
 
-### Edit tags ###
+### Edit tags
 
 #### Set new value for nbt tag: ####
 `/nbt object query = value type`  
@@ -448,8 +444,5 @@ Example, set variable:
 => select entity or block by right-click  
 and selected object is stored in variable %var  
 
-***********************************************
-
-API
----
+## API
 http://flinbein.github.io/PowerNBT/apidocs/
